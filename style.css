@@ -1,0 +1,632 @@
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+20&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+/* Navigation */
+nav{
+    width: 15%;
+    height: 100vh;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.2);
+    position: fixed;
+    z-index: -2;
+    transition: all 0.5s ease-in-out;
+}
+.profile{
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    cursor: pointer;
+}
+.profile img{
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.profile p{
+    display: block;
+    width: fit-content;
+    margin: 15px auto;
+    font-family: sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+    transition: all 0.5s ease-in-out;
+}
+/* Navigation link */
+.navigation{
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 130px;
+}
+.nav-item{
+    list-style-type: none;
+    margin: 40px 15%;
+    display: block;
+    transition: all 0.5s ease-in-out;
+}
+.nav-item a{
+    text-decoration: none;
+    color: #027600;
+    font-family: sans-serif;
+    font-size: 16px;
+    text-align: left;
+    transition: all 0.5s ease-in-out;
+}
+.active a{
+    color: black;
+    transition: all 0.5s ease-in-out;
+}
+.active.handover a{
+    color: #027600;
+}
+.nav-item svg{
+    fill: #027600;
+    width: 20px;
+    height: 20px;
+    transform: translateY(3px);
+    transition: all 0.5s ease-in-out;
+}
+.active svg{
+    fill: black;
+    transition: all 0.5s ease-in-out;
+}
+.active.handover svg{
+    fill: #027600;
+}
+/* Loginout */
+.loginout a{
+    text-decoration: none;
+}
+.loginout{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+}
+.loginout button{
+    border: 2px solid #027600;
+    border-radius: 5px;
+    background: transparent;
+    outline: none;
+    width: 120px;
+    height: 30px;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.loginout button:hover{
+    background: #85FB83;
+    border: 2px solid #85FB83;
+}
+.loginout button:hover span{
+    color: rgb(0, 0, 0);
+}
+.loginout button:hover svg{
+    fill: rgb(0, 0, 0);
+}
+.loginout span{
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: #027600;
+    text-align: center;
+    margin-left: 7px;
+    transition: all 0.5s ease-in-out;
+}
+.loginout svg{
+    fill: #027600;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 3px;
+    left: 7px;
+    transition: all 0.5s ease-in-out;
+}
+/*Navigation Hover*/
+.hover{
+    display: block;
+    z-index: -1;
+    width: 80%;
+    height: 50px;
+    background: #85FB83;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 28px;
+    transition: all 0.5s ease-in-out;
+}
+.hover.hover1{
+    top: 89px;
+}
+.hover.hover2{
+    top: 155px;
+}
+.hover.hover3{
+    top: 220px;
+}
+.hover.hover4{
+    top: 285px;
+}
+.hover.hover5{
+    top: 347px;
+}
+.hover.hover6{
+    top: 412px;
+}
+/*navitem*/
+.nav-item:hover a{
+    color: black;
+}
+.nav-item:hover svg{
+    fill: black;
+}
+/*-----------------------------------------------------------------------------------------------*/
+/* Header */
+header{
+    width: 75%;
+    height: fit-content;
+    position: fixed;
+    left: 20%;
+    top: 5vh;
+    display: flex;
+    justify-content: space-evenly;
+    transition: all 0.5s ease-in-out;
+}
+.header-title h1{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: all 0.5s ease-in-out;
+}
+/* Search Bar*/
+.searchbar{
+    width: 30%;
+    position: relative;
+    bottom: 15px;
+}
+.searchbar input{
+    width: 85%;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    position: absolute;
+    top: 0;
+    padding-left: 10px;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+.searchbar span{
+    position: absolute;
+    width: 10%;
+    height: 40px;
+    top:0;
+    right: 0;
+    background: #85FB83;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    transition: all 0.5s ease-in-out;
+}
+.searchbar span svg{
+    display: block;
+    margin: 25% auto;
+    transition: all 0.5s ease-in-out;
+}
+/* Dark Mode */
+.darkmode input{
+    display: none;
+}
+.darkmode label{
+    width: 100px;
+    height: 40px;
+    display: block;
+    position: relative;
+    bottom: 13px;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4),inset 0px 5px 15px rgba(255,255,255,0.4);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.darkmode label::after{
+    content: "";
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background: #85FB83;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    transition: all 0.5s ease-in-out;
+}
+input:checked + label{
+    background: #141414;
+}
+input:checked + label::after{
+    left: 93%;
+    transform: translateX(-93%);
+    background: #0276ff;
+}
+.darkmode :active::after{
+    width: 40px;
+}
+.darkmode label svg{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+}
+.darkmode label .sun{
+    left: 5px;
+    fill: black;
+}
+.darkmode label .moon{
+    right: 5px;
+    fill: rgba(0, 0, 0, 0.4);
+}
+.darkmode input:checked + label .sun{
+    fill: rgba(255, 255, 255, 0.1)
+}
+.darkmode input:checked + label .moon{
+    fill: white;
+}
+/*DarkMode for body*/
+body.changetheme{
+    background: #161616;
+}
+/*DarkMode for header*/
+header.changetheme h1{
+    color: white;
+}
+header.changetheme .searchbar span{
+    background: #3694ff;
+    backdrop-filter: blur(50px);
+    backdrop-filter: brightness(50px);
+    box-shadow: 0 1px 3px #3694ff, 1px 0px 3px #3694ff, 0 -1px 3px #3694ff, -1px 0px 3px #3694ff;
+}
+header.changetheme .searchbar span svg{
+    fill: white;
+}
+header.changetheme .notification svg{
+    fill: white;
+}
+header.changetheme .noti{
+    background: #3694ff;
+    backdrop-filter: blur(50px);
+    backdrop-filter: brightness(50px);
+    box-shadow: 0 1px 3px #3694ff, 1px 0px 3px #3694ff, 0 -1px 3px #3694ff, -1px 0px 3px #3694ff;
+}
+header.changetheme .noti p{
+    color: white;
+}
+/*DarkMode for Nav*/
+nav.changetheme{
+    background: #111;
+}
+nav.changetheme .profile p{
+    color: white;
+}
+nav.changetheme .nav-item a{
+    color:#0276ff;
+}
+nav.changetheme .nav-item svg{
+    fill:#0276ff;
+}
+nav.changetheme .active a{
+    color: white;
+}
+nav.changetheme .active svg{
+    fill: white;
+}
+nav.changetheme .hover{
+    background: #3694ff;
+    backdrop-filter: blur(50px);
+    backdrop-filter: brightness(50px);
+    box-shadow: 0 1px 5px #3694ff, 1px 0px 5px #3694ff, 0 -1px 5px #3694ff, -1px 0px 5px #3694ff;
+}
+nav.changetheme .active.handover a{
+    color:#0276ff;
+}
+nav.changetheme .active.handover svg{
+    fill:#0276ff;
+}
+nav.changetheme .nav-item:hover a{
+    color:#ffffff;
+}
+nav.changetheme .nav-item:hover svg{
+    fill:#ffffff;
+}
+/*DarkMode for login out*/
+nav.changetheme .loginout button{
+    border: 2px solid #0276ff;
+}
+nav.changetheme .loginout button:hover{
+    background: #3694ff;
+    border: 2px solid #3694ff;
+    backdrop-filter: blur(50px);
+    backdrop-filter: brightness(50px);
+    box-shadow: 0 1px 5px #3694ff, 1px 0px 5px #3694ff, 0 -1px 5px #3694ff, -1px 0px 5px #3694ff;
+}
+nav.changetheme .loginout button:hover span{
+    color: rgb(255, 255, 255);
+}
+nav.changetheme .loginout button:hover svg{
+    fill: rgb(255, 255, 255);
+}
+nav.changetheme .loginout span{
+    color: #0276ff;
+}
+nav.changetheme .loginout svg{
+    fill: #0276ff;
+}
+/*Darkmode for dashboard*/
+.dashboard.changetheme{
+    background: #111;
+    box-shadow: 1px 0 rgba(0,0,0,0.2), -1px 0 rgba(0,0,0,0.2), 0px 1px rgba(0,0,0,0.2), 0px -1px rgba(0,0,0,0.2);
+    color: white;
+}
+/*DarkMode for orderlist*/
+.orderlist.changetheme{
+    background: #111;
+    box-shadow: 1px 0 rgba(0,0,0,0.2), -1px 0 rgba(0,0,0,0.2), 0px 1px rgba(0,0,0,0.2), 0px -1px rgba(0,0,0,0.2);
+}
+.orderlist.changetheme h1{
+    color: white;
+}
+.orderlist.changetheme .orderlist-title div{
+    background: #101010;
+    box-shadow: 1px 0 rgba(0,0,0,0.2), -1px 0 rgba(0,0,0,0.2), 0px 1px rgba(0,0,0,0.2), 0px -1px rgba(0,0,0,0.2);
+}
+.orderlist.changetheme .orderlist-title div p{
+    color: #0276ff;
+}
+.orderlist.changetheme .orderlist-title div svg{
+    fill: #0276ff;
+}
+/*DarkMode for kitchenlist*/
+.kitchenlist.changetheme{
+    background: #111;
+    box-shadow: 1px 0 rgba(0,0,0,0.2), -1px 0 rgba(0,0,0,0.2), 0px 1px rgba(0,0,0,0.2), 0px -1px rgba(0,0,0,0.2);
+}
+.kitchenlist.changetheme h1{
+    color: white;
+}
+.kitchenlist.changetheme .kitchenlist-title div{
+    background: #101010;
+    box-shadow: 1px 0 rgba(0,0,0,0.2), -1px 0 rgba(0,0,0,0.2), 0px 1px rgba(0,0,0,0.2), 0px -1px rgba(0,0,0,0.2);
+}
+.kitchenlist.changetheme .kitchenlist-title div p{
+    color: #0276ff;
+}
+.kitchenlist.changetheme .kitchenlist-title div svg{
+    fill: #0276ff;
+}
+/*DarkMode for developer brand*/
+.developer.changetheme{
+    background: #111;
+    box-shadow: 1px 0 rgba(0,0,0,0.2), -1px 0 rgba(0,0,0,0.2), 0px 1px rgba(0,0,0,0.2), 0px -1px rgba(0,0,0,0.2);
+}
+.developer.developer.changetheme h1{
+    color: #0276ff;
+}
+/* Notification */
+.notification{
+    position: relative;
+    bottom: 7px;
+    cursor: pointer;
+}
+.notification svg{
+    width: 35px;
+    height: 35px;
+    transition: all 0.5s ease-in-out;
+}
+.noti{
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background-color: #85FB83;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+    position: absolute;
+    top: -15px;
+    right: -17px;
+    transition: all 0.5s ease-in-out;
+}
+.noti p{
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+}
+/*-----------------------------------------------------------------------------------------------*/
+/*Dashboard*/
+.dashboard{
+    position: fixed;
+    left: 16%;
+    top: 12vh;
+    width: 83%;
+    height: 13vh;
+    border-radius: 20px;
+    padding: 20px 30px;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.1),1px 0px 10px rgba(0,0,0,0.1),0 -1px 10px rgba(0,0,0,0.1),-1px 0px 10px rgba(0,0,0,0.1);
+    transition: all 0.5s ease-in-out;
+}
+.dashboard1{
+    display: flex;
+    justify-content: space-between;
+}
+.dashboard1 h5{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.dashboard1 p{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+}
+.dashboard1 p span:not(:last-child){
+    margin-right: 10px;
+}
+.dashboard2{
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(2vh);
+    text-transform: uppercase;
+}
+.dashboard2 p span:first-child{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+.dashboard2 p span:last-child{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+.dashboard2 p:first-child span:last-child{
+    margin-left: 10px;
+}
+.dashboard2 p:last-child span:first-child{
+    margin-right: 10px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+/*Order List*/
+.orderlist{
+    width:55%;
+    height: 62vh;
+    position: fixed;
+    left: 16%;
+    top: 27vh;
+    border-radius: 20px;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.1),1px 0px 10px rgba(0,0,0,0.1),0 -1px 10px rgba(0,0,0,0.1),-1px 0px 10px rgba(0,0,0,0.1);
+    transition: all 0.5s ease-in-out;
+}
+.orderlist h1{
+    text-align: center;
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-weight: 400;
+    transition: all 0.5s ease-in-out;
+}
+.orderlist-title{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.orderlist-title div{
+    width: 80px;
+    height: 80px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+.orderlist-title div p{
+    font-family: sans-serif;
+    font-size: 12px;
+    width: fit-content;
+    color:#027600;
+    font-weight: 500;
+    margin: 0 auto;
+    transition: all 0.5s ease-in-out;
+}
+.orderlist-title div svg{
+    fill: #027600;
+    display: block;
+    margin: 15% auto;
+    transition: all 0.5s ease-in-out;
+}
+/*-----------------------------------------------------------------------------------------------*/
+/*Kitchen List*/
+.kitchenlist{
+    width:27%;
+    height: 62vh;
+    position: fixed;
+    right: 1%;
+    top: 27vh;
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.1),1px 0px 10px rgba(0,0,0,0.1),0 -1px 10px rgba(0,0,0,0.1),-1px 0px 10px rgba(0,0,0,0.1);
+}
+.kitchenlist h1{
+    text-align: center;
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-weight: 400;
+    transition: all 0.5s ease-in-out;
+}
+.kitchenlist-title{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.kitchenlist-title div{
+    width: 80px;
+    height: 80px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+.kitchenlist-title div p{
+    font-family: sans-serif;
+    font-size: 12px;
+    width: fit-content;
+    color:#027600;
+    font-weight: 500;
+    margin: 0 auto;
+    transition: all 0.5s ease-in-out;
+}
+.kitchenlist-title div svg{
+    fill: #027600;
+    display: block;
+    margin: 15% auto;
+    transition: all 0.5s ease-in-out;
+}
+.developer{
+    position: fixed;
+    left: 16%;
+    bottom: 2vh;
+    width: 83%;
+    height: 7vh;
+    border-radius: 20px;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.1),1px 0px 10px rgba(0,0,0,0.1),0 -1px 10px rgba(0,0,0,0.1),-1px 0px 10px rgba(0,0,0,0.1);
+    transition: all 0.5s ease-in-out;
+}
+.developer h1{
+    color: #027600;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-family: "Jersey 20", sans-serif;
+    font-weight: 400;
+    transition: all 0.5s ease-in-out;
+}

@@ -1,0 +1,1309 @@
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+20&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+/* Navigation */
+nav{
+    width: 15%;
+    height: 100vh;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.2);
+    position: fixed;
+    z-index: -2;
+    transition: all 0.5s ease-in-out;
+}
+.profile{
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    cursor: pointer;
+}
+.profile img{
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.profile p{
+    display: block;
+    width: fit-content;
+    margin: 15px auto;
+    font-family: sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+    transition: all 0.5s ease-in-out;
+}
+/* Navigation link */
+.navigation{
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 130px;
+}
+.nav-item{
+    list-style-type: none;
+    margin: 40px 15%;
+    display: block;
+    transition: all 0.5s ease-in-out;
+}
+.nav-item a{
+    text-decoration: none;
+    color: #027600;
+    font-family: sans-serif;
+    font-size: 16px;
+    text-align: left;
+    transition: all 0.5s ease-in-out;
+}
+.active a{
+    color: black;
+    transition: all 0.5s ease-in-out;
+}
+.active.handover a{
+    color: #027600;
+}
+.nav-item svg{
+    fill: #027600;
+    width: 20px;
+    height: 20px;
+    transform: translateY(3px);
+    transition: all 0.5s ease-in-out;
+}
+.active svg{
+    fill: black;
+    transition: all 0.5s ease-in-out;
+}
+.active.handover svg{
+    fill: #027600;
+}
+/* Loginout */
+.loginout a{
+    text-decoration: none;
+}
+.loginout{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+}
+.loginout button{
+    border: 2px solid #027600;
+    border-radius: 5px;
+    background: transparent;
+    outline: none;
+    width: 120px;
+    height: 30px;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.loginout button:hover{
+    background: #85FB83;
+    border: 2px solid #85FB83;
+    scale: 1.05;
+}
+.loginout button:hover span{
+    color: rgb(0, 0, 0);
+}
+.loginout button:hover svg{
+    fill: rgb(0, 0, 0);
+}
+.loginout span{
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: #027600;
+    text-align: center;
+    margin-left: 7px;
+    transition: all 0.5s ease-in-out;
+}
+.loginout svg{
+    fill: #027600;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 3px;
+    left: 7px;
+    transition: all 0.5s ease-in-out;
+}
+/*Navigation Hover*/
+.hover{
+    display: block;
+    z-index: -1;
+    width: 80%;
+    height: 50px;
+    background: #85FB83;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 89px;
+    transition: all 0.5s ease-in-out;
+}
+.hover.hover1{
+    top: 28px;
+}
+.hover.hover2{
+    top: 155px;
+}
+.hover.hover3{
+    top: 220px;
+}
+.hover.hover4{
+    top: 285px;
+}
+.hover.hover5{
+    top: 347px;
+}
+.hover.hover6{
+    top: 412px;
+}
+/*navitem*/
+.nav-item:hover a{
+    color: black;
+}
+.nav-item:hover svg{
+    fill: black;
+}
+/*-----------------------------------------------------------------------------------------------*/
+/* Header */
+header{
+    width: 75%;
+    height: fit-content;
+    position: fixed;
+    left: 20%;
+    top: 5vh;
+    display: flex;
+    justify-content: space-evenly;
+    transition: all 0.5s ease-in-out;
+}
+.header-title h1{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: all 0.5s ease-in-out;
+}
+/* Search Bar*/
+.searchbar{
+    width: 30%;
+    position: relative;
+    bottom: 15px;
+}
+.searchbar input{
+    width: 85%;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    position: absolute;
+    top: 0;
+    padding-left: 10px;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+.searchbar span{
+    position: absolute;
+    width: 10%;
+    height: 40px;
+    top:0;
+    right: 0;
+    background: #85FB83;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    transition: all 0.5s ease-in-out;
+}
+.searchbar span svg{
+    display: block;
+    margin: 25% auto;
+    transition: all 0.5s ease-in-out;
+}
+/* Dark Mode */
+.darkmode input{
+    display: none;
+}
+.darkmode label{
+    width: 100px;
+    height: 40px;
+    display: block;
+    position: relative;
+    bottom: 13px;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4),inset 0px 5px 15px rgba(255,255,255,0.4);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.darkmode label::after{
+    content: "";
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background: #85FB83;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    transition: all 0.5s ease-in-out;
+}
+input:checked + label{
+    background: #141414;
+}
+input:checked + label::after{
+    left: 93%;
+    transform: translateX(-93%);
+    background: #0276ff;
+}
+.darkmode :active::after{
+    width: 40px;
+}
+.darkmode label svg{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+}
+.darkmode label .sun{
+    left: 5px;
+    fill: black;
+}
+.darkmode label .moon{
+    right: 5px;
+    fill: rgba(0, 0, 0, 0.4);
+}
+.darkmode input:checked + label .sun{
+    fill: rgba(255, 255, 255, 0.1)
+}
+.darkmode input:checked + label .moon{
+    fill: white;
+}
+/*DarkMode for body*/
+body.changetheme{
+    background: #161616;
+}
+/*DarkMode for header*/
+header.changetheme h1{
+    color: white;
+}
+header.changetheme .searchbar span{
+    background: #3694ff;
+    backdrop-filter: blur(50px);
+    backdrop-filter: brightness(50px);
+    box-shadow: 0 1px 3px #3694ff, 1px 0px 3px #3694ff, 0 -1px 3px #3694ff, -1px 0px 3px #3694ff;
+}
+header.changetheme .searchbar span svg{
+    fill: white;
+}
+header.changetheme .notification svg{
+    fill: white;
+}
+header.changetheme .noti{
+    background: #3694ff;
+    backdrop-filter: blur(50px);
+    backdrop-filter: brightness(50px);
+    box-shadow: 0 1px 3px #3694ff, 1px 0px 3px #3694ff, 0 -1px 3px #3694ff, -1px 0px 3px #3694ff;
+}
+header.changetheme .noti p{
+    color: white;
+}
+/*DarkMode for Nav*/
+nav.changetheme{
+    background: #111;
+}
+nav.changetheme .profile p{
+    color: white;
+}
+nav.changetheme .nav-item a{
+    color:#0276ff;
+}
+nav.changetheme .nav-item svg{
+    fill:#0276ff;
+}
+nav.changetheme .active a{
+    color: white;
+}
+nav.changetheme .active svg{
+    fill: white;
+}
+nav.changetheme .hover{
+    background: #3694ff;
+    backdrop-filter: blur(50px);
+    backdrop-filter: brightness(50px);
+    box-shadow: 0 1px 5px #3694ff, 1px 0px 5px #3694ff, 0 -1px 5px #3694ff, -1px 0px 5px #3694ff;
+}
+nav.changetheme .active.handover a{
+    color:#0276ff;
+}
+nav.changetheme .active.handover svg{
+    fill:#0276ff;
+}
+nav.changetheme .nav-item:hover a{
+    color:#ffffff;
+}
+nav.changetheme .nav-item:hover svg{
+    fill:#ffffff;
+}
+/*DarkMode for login out*/
+nav.changetheme .loginout button{
+    border: 2px solid #0276ff;
+}
+nav.changetheme .loginout button:hover{
+    background: #3694ff;
+    border: 2px solid #3694ff;
+    backdrop-filter: blur(50px);
+    backdrop-filter: brightness(50px);
+    box-shadow: 0 1px 5px #3694ff, 1px 0px 5px #3694ff, 0 -1px 5px #3694ff, -1px 0px 5px #3694ff;
+}
+nav.changetheme .loginout button:hover span{
+    color: rgb(255, 255, 255);
+}
+nav.changetheme .loginout button:hover svg{
+    fill: rgb(255, 255, 255);
+}
+nav.changetheme .loginout span{
+    color: #0276ff;
+}
+nav.changetheme .loginout svg{
+    fill: #0276ff;
+}
+/*Darkmode for dashboard*/
+.orderform.changetheme{
+    background: #111;
+    box-shadow: 1px 0 rgba(0,0,0,0.2), -1px 0 rgba(0,0,0,0.2), 0px 1px rgba(0,0,0,0.2), 0px -1px rgba(0,0,0,0.2);
+    color: white;
+}
+/*DarkMode for orderlist*/
+.orderlist.changetheme{
+    background: #111;
+    box-shadow: 1px 0 rgba(0,0,0,0.2), -1px 0 rgba(0,0,0,0.2), 0px 1px rgba(0,0,0,0.2), 0px -1px rgba(0,0,0,0.2);
+}
+.orderlist.changetheme h1{
+    color: white;
+}
+.orderlist.changetheme .orderlist-title div{
+    background: #101010;
+    box-shadow: 1px 0 rgba(0,0,0,0.2), -1px 0 rgba(0,0,0,0.2), 0px 1px rgba(0,0,0,0.2), 0px -1px rgba(0,0,0,0.2);
+}
+.orderlist.changetheme .orderlist-title div p{
+    color: #0276ff;
+}
+.orderlist.changetheme .orderlist-title div svg{
+    fill: #0276ff;
+}
+.orderlist.changetheme .orderlist-table{
+    border: 1px solid white;
+}
+.orderlist.changetheme .orderlist-table-data p{
+    color: white;
+}
+.orderlist.changetheme .edit{
+    fill: yellow;
+}
+/*Darkmode for pockets*/
+.pockets.changetheme{
+    background: #111;
+    box-shadow: 1px 0 rgba(0,0,0,0.2), -1px 0 rgba(0,0,0,0.2), 0px 1px rgba(0,0,0,0.2), 0px -1px rgba(0,0,0,0.2);
+}
+.pockets.changetheme .showtable div{
+    background: #3694ff;
+    backdrop-filter: blur(50px);
+    backdrop-filter: brightness(50px);
+    box-shadow: 0 1px 5px #3694ff, 1px 0px 5px #3694ff, 0 -1px 5px #3694ff, -1px 0px 5px #3694ff;
+}
+.pockets.changetheme .showtable div p{
+    color: white;
+}
+.pockets.changetheme .showtable div:hover{
+    background: #0278ffc3;
+}
+.pockets.changetheme div:not(:first-child, :first-child > div){
+    border: 1px solid #0276ff;
+}
+.pockets.changetheme div:not(:first-child, :first-child > div) p{
+    color: #0276ff;
+}
+.pockets.changetheme div:not(:first-child, :first-child > div):hover{
+    background: #3694ff;
+    border: 2px solid #3694ff;
+    backdrop-filter: blur(50px);
+    backdrop-filter: brightness(50px);
+    box-shadow: 0 1px 5px #3694ff, 1px 0px 5px #3694ff, 0 -1px 5px #3694ff, -1px 0px 5px #3694ff;
+    scale: 1.03;
+}
+.pockets.changetheme div:not(:first-child, :first-child > div):hover p{
+    color: rgb(255, 255, 255);
+}
+.pockets.changetheme div:not(:first-child, :first-child > div) svg{
+    fill: #0276ff;
+}
+.pockets.changetheme div:not(:first-child, :first-child > div):hover svg{
+    fill: rgb(255, 255, 255);
+}
+/* Darkmode for inputform */
+.inputform.changetheme h1{
+    color: #fff;
+}
+.inputform.changetheme div label{
+    color: #fff;
+}
+.inputform.changetheme button{
+    border: 1px solid #0276ff;
+}
+.inputform.changetheme button p{
+    color:#0276ff;
+}
+.inputform.changetheme button svg{
+    fill: #0276ff;
+}
+.inputform.changetheme button:hover{
+    background: #3694ff;
+    border: 2px solid #3694ff;
+}
+.inputform.changetheme button:hover p{
+    color: white;
+}
+.inputform.changetheme button:hover svg{
+    fill: white;
+}
+.inputform.changetheme .close{
+    fill: white;
+    position: absolute;
+    top: 5vh;
+    right: 5%;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+/* Notification */
+.notification{
+    position: relative;
+    bottom: 7px;
+    cursor: pointer;
+}
+.notification svg{
+    width: 35px;
+    height: 35px;
+    transition: all 0.5s ease-in-out;
+}
+.noti{
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background-color: #85FB83;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+    position: absolute;
+    top: -15px;
+    right: -17px;
+    transition: all 0.5s ease-in-out;
+}
+.noti p{
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+}
+/*-----------------------------------------------------------------------------------------------*/
+/*OrderForm*/
+.orderform{
+    position: fixed;
+    left: 16%;
+    top: 12vh;
+    width: 83%;
+    height: 13vh;
+    border-radius: 20px;
+    padding: 20px 30px;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.1),1px 0px 10px rgba(0,0,0,0.1),0 -1px 10px rgba(0,0,0,0.1),-1px 0px 10px rgba(0,0,0,0.1);
+    transition: all 0.5s ease-in-out;
+}
+.orderform1{
+    display: flex;
+    justify-content: space-between;
+}
+.orderform1 h5{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.orderform1 p{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+}
+.orderform1 p span:not(:last-child){
+    margin-right: 10px;
+}
+.orderform2{
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(2vh);
+    text-transform: uppercase;
+}
+.orderform2 p span:first-child{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+.orderform2 p span:last-child{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+.orderform2 p:first-child span:last-child{
+    margin-left: 10px;
+}
+.orderform2 p:last-child span:first-child{
+    margin-right: 10px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+/*Order List*/
+.orderlist{
+    width:60%;
+    height: 71vh;
+    position: fixed;
+    left: 16%;
+    top: 27vh;
+    border-radius: 20px;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.1),1px 0px 10px rgba(0,0,0,0.1),0 -1px 10px rgba(0,0,0,0.1),-1px 0px 10px rgba(0,0,0,0.1);
+    transition: all 0.5s ease-in-out;
+}
+.orderlist h1{
+    text-align: center;
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-weight: 400;
+    transition: all 0.5s ease-in-out;
+}
+.orderlist-title{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.orderlist-title div{
+    width: 70px;
+    height: 60px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+.orderlist-title div:last-child{
+    position: relative;
+    left: 15%;
+}
+.orderlist-title div:nth-child(4){
+    position: relative;
+    left: 7%;
+}
+.orderlist-title div:nth-child(3){
+    position: relative;
+}
+.orderlist-title div:nth-child(2){
+    position: relative;
+    right: 8.5%;
+}
+.orderlist-title div:first-child{
+    position: relative;
+    right: 15%;
+}
+.orderlist-title div p{
+    font-family: sans-serif;
+    font-size: 11px;
+    width: fit-content;
+    color:#027600;
+    font-weight: 500;
+    margin: 0 auto;
+    transition: all 0.5s ease-in-out;
+}
+.orderlist-title div svg{
+    fill: #027600;
+    display: block;
+    margin: 10% auto;
+    transition: all 0.5s ease-in-out;
+}
+.orderlist-table{
+    width: 90%;
+    height: 50vh;
+    margin-top: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 20px 0;
+    overflow-y: scroll;
+    transition: all 0.5s ease-in-out;
+}
+.orderlist-table div:last-child{
+    border: none;
+}
+.orderlist-table .orderlist-table-data{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid #aaa;
+    position: relative;
+    right: 1%;
+    bottom: 2vh;
+    margin-top: 2vh;
+    padding-bottom: 1vh;
+}
+.orderlist-table-data p{
+    font-family: sans-serif;
+    font-weight: 500px;
+    text-align: center;
+    overflow-wrap: break-word;
+    transition: all 0.5s ease-in-out;
+}
+.orderlist-table-data .id{
+    position: relative;
+    right: 5%;
+    width: 4%;
+}
+.orderlist-table-data .date{
+    position: relative;
+    right: 3.5%;
+    bottom: 1vh;
+    width: 13%;
+}
+.orderlist-table-data .customer{
+    position: relative;
+    left: 1%;
+    width: 5%;
+}
+.orderlist-table-data .item{
+    position: relative;
+    width: 18%;
+    left: 5%;
+}
+.orderlist-table-data .quantity{
+    position: relative;
+    left: 6%;
+    width: 8%;
+}
+.orderlist-table-data .remark{
+    position: relative;
+    left: 9%;
+    bottom: 0.3vh;
+    width: 15%;
+}
+.orderlist-table-data .remark p{
+    font-weight: bold;
+}
+.edit_delete{
+    position: relative;
+    left: 7.5%;
+}
+.edit{
+    fill: rgb(255, 153, 0);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.delete{
+    fill: red;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.order_table.changetable{
+    scale: 0.5;
+    left: 25%;
+    transform: translate(-50%,0);
+    opacity: 0;
+    visibility: hidden;
+}
+.booking_table{
+    scale: 0.5;
+    left: 25%;
+    transform: translate(-50%,0);
+    opacity: 0;
+    visibility: hidden;
+}
+.booking_table.changetable{
+    scale: 1;
+    left: 50%;
+    transform: translate(-50%,0);
+    opacity: 1;
+    visibility: visible;
+}
+.delivery_table{
+    scale: 0.5;
+    left: 25%;
+    transform: translate(-50%,0);
+    opacity: 0;
+    visibility: hidden;
+}
+.delivery_table.changetable{
+    scale: 1;
+    left: 50%;
+    transform: translate(-50%,0);
+    opacity: 1;
+    visibility: visible;
+}
+/*-----------------------------------------------------------------------------------------------*/
+/*Pockets*/
+.pockets{
+    width:22%;
+    height: 71vh;
+    position: fixed;
+    right: 1%;
+    top: 27vh;
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.1),1px 0px 10px rgba(0,0,0,0.1),0 -1px 10px rgba(0,0,0,0.1),-1px 0px 10px rgba(0,0,0,0.1);
+    transition: all 0.5s ease-in-out;
+}
+.showtable{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-around; 
+    height: fit-content;
+    margin-top: 40px;
+    transition: all 0.5s ease-in-out;
+}
+.showtable div{
+    background: #85FB83;
+    border-radius: 50%;
+    width: 40%;
+    height: 16vh;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+.showtable div p{
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 0.5s ease-in-out;
+}
+.showtable div:hover{
+    scale: 0.9;
+    background: #027600c1;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+}
+.pockets div:not(:first-child, :first-child > div){
+    width: 80%;
+    height: 7vh;
+    border: 1px solid #027600;
+    border-radius: 10px;
+    margin: 7vh auto;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.pockets div:not(:first-child, :first-child > div):hover{
+    background: #85FB83;
+    border: 2px solid #85FB83;
+    scale: 1.05;
+}
+.pockets div:not(:first-child, :first-child > div) p{
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color:#027600;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-60%,-50%);
+    transition: all 0.5s ease-in-out;
+}
+.pockets div:not(:first-child, :first-child > div):hover p{
+    color: black;
+}
+.pockets div:not(:first-child, :first-child > div) svg{
+    fill: #027600;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-35%,-50%);
+    transition: all 0.5s ease-in-out;
+}
+.pockets div:not(:first-child, :first-child > div):hover svg{
+    fill: black;
+}
+.show_order{
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+.show_booking{
+    transition: all 0.5s ease-in-out;
+}
+.show_delivery{
+    transition: all 0.5s ease-in-out;
+}
+/*-----------------------------------------------------------------------------------------------*/
+/*Inputs form*/
+/*For Order*/
+.orderlist-input{
+    width: 50%;
+    height: 90vh;
+    box-shadow: 1px 0 10px rgba(0,0,0,0.2), 0px 1px 10px rgba(0,0,0,0.2), -1px 0 10px rgba(0,0,0,0.2), 0px -1px 10px rgba(0,0,0,0.2);
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    transform: translate(-30%,-10%);
+    backdrop-filter: blur(11px);
+    border-radius: 25px;
+    transition: all 0.5s ease-in-out;
+    scale: 0.4;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+.orderlist-input.openform{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    scale: 1;
+    opacity: 1;
+    visibility: visible;
+    z-index: 5;
+}
+.orderlist-input h1{
+    font-family: sans-serif;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 10vh;
+    transition: all 0.5s ease-in-out;
+}
+.orderlist-input div{
+    width:35%;
+    height: fit-content;
+}
+.orderlist-input div label{
+    display: block;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    margin-bottom: 3vh;
+    transition: all 0.5s ease-in-out;
+}
+.orderlist-input div input{
+    display: block;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 100%;
+    height: 7vh;
+    padding: 5px;
+    outline: none;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+.orderlist-input .date{
+    position: absolute;
+    left: 10%;
+    top: 20vh;
+}
+.orderlist-input .time{
+    position: absolute;
+    left: 10%;
+    top: 38vh;
+}
+.orderlist-input .customer{
+    position: absolute;
+    left: 10%;
+    top: 58vh;
+}
+.orderlist-input .item{
+    position: absolute;
+    left: 55%;
+    top: 20vh;
+}
+.orderlist-input .quantity{
+    position: absolute;
+    left: 55%;
+    top: 38vh;
+}
+.orderlist-input .remark{
+    position: absolute;
+    left: 55%;
+    top: 58vh;
+}
+.orderlist-input button{
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 7vh;
+    bottom: 5vh;
+    outline: none;
+    border: 1px solid #027600;
+    border-radius: 10px;
+    background: transparent;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.orderlist-input button p{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-60%,-50%);
+    color:#027600;
+    transition: all 0.5s ease-in-out;
+    font-size: 1em;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+.orderlist-input button svg{
+    fill: #027600;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-40%,-50%);
+    transition: all 0.5s ease-in-out;
+}
+.orderlist-input button:hover{
+    background: #85FB83;
+    border: 2px solid #85FB83;
+}
+.orderlist-input button:active{
+    width: 27%;
+    scale: 0.95;
+}
+.orderlist-input button:hover p{
+    color: black;
+}
+.orderlist-input button:hover svg{
+    fill: black;
+}
+.orderlist-input .close{
+    fill: #000;
+    position: absolute;
+    top: 5vh;
+    right: 5%;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.orderlist-input .close:hover{
+    scale: 1.2;
+}
+/*For booking*/
+.bookinglist-input{
+    width: 50%;
+    height: 90vh;
+    box-shadow: 1px 0 10px rgba(0,0,0,0.2), 0px 1px 10px rgba(0,0,0,0.2), -1px 0 10px rgba(0,0,0,0.2), 0px -1px 10px rgba(0,0,0,0.2);
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    transform: translate(-30%,-10%);
+    backdrop-filter: blur(11px);
+    border-radius: 25px;
+    transition: all 0.5s ease-in-out;
+    scale: 0.4;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+.bookinglist-input.openform{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    scale: 1;
+    opacity: 1;
+    visibility: visible;
+    z-index: 5;
+}
+.bookinglist-input h1{
+    font-family: sans-serif;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 10vh;
+    transition: all 0.5s ease-in-out;
+}
+.bookinglist-input div{
+    width:35%;
+    height: fit-content;
+}
+.bookinglist-input div label{
+    display: block;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    margin-bottom: 3vh;
+    transition: all 0.5s ease-in-out;
+}
+.bookinglist-input div input{
+    display: block;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 100%;
+    height: 7vh;
+    padding: 5px;
+    outline: none;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+.bookinglist-input .date{
+    position: absolute;
+    left: 10%;
+    top: 20vh;
+}
+.bookinglist-input .time{
+    position: absolute;
+    left: 10%;
+    top: 38vh;
+}
+.bookinglist-input .customer{
+    position: absolute;
+    left: 10%;
+    top: 58vh;
+}
+.bookinglist-input .item{
+    position: absolute;
+    left: 55%;
+    top: 20vh;
+}
+.bookinglist-input .quantity{
+    position: absolute;
+    left: 55%;
+    top: 38vh;
+}
+.bookinglist-input .remark{
+    position: absolute;
+    left: 55%;
+    top: 58vh;
+}
+.bookinglist-input button{
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 7vh;
+    bottom: 5vh;
+    outline: none;
+    border: 1px solid #027600;
+    border-radius: 10px;
+    background: transparent;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.bookinglist-input button p{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    color:#027600;
+    transform: translate(-60%,-50%);
+    transition: all 0.5s ease-in-out;
+    font-size: 1em;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+.bookinglist-input button svg{
+    fill: #027600;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-40%,-50%);
+    transition: all 0.5s ease-in-out;
+}
+.bookinglist-input button:hover{
+    background: #85FB83;
+    border: 2px solid #85FB83;
+}
+.bookinglist-input button:active{
+    width: 27%;
+    scale: 0.95;
+}
+.bookinglist-input button:hover p{
+    color: black;
+}
+.bookinglist-input button:hover svg{
+    fill: black;
+}
+.bookinglist-input .close{
+    fill: #000;
+    position: absolute;
+    top: 5vh;
+    right: 5%;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.bookinglist-input .close:hover{
+    scale: 1.2;
+}
+/*For delivery*/
+.deliverylist-input{
+    width: 50%;
+    height: 90vh;
+    box-shadow: 1px 0 10px rgba(0,0,0,0.2), 0px 1px 10px rgba(0,0,0,0.2), -1px 0 10px rgba(0,0,0,0.2), 0px -1px 10px rgba(0,0,0,0.2);
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    transform: translate(-30%,-10%);
+    backdrop-filter: blur(11px);
+    border-radius: 25px;
+    transition: all 0.5s ease-in-out;
+    scale: 0.4;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+.deliverylist-input.openform{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    scale: 1;
+    opacity: 1;
+    visibility: visible;
+    z-index: 5;
+}
+.deliverylist-input h1{
+    font-family: sans-serif;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 10vh;
+    transition: all 0.5s ease-in-out;
+}
+.deliverylist-input div{
+    width:35%;
+    height: fit-content;
+}
+.deliverylist-input div label{
+    display: block;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    margin-bottom: 3vh;
+    transition: all 0.5s ease-in-out;
+}
+.deliverylist-input div input{
+    display: block;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 100%;
+    height: 7vh;
+    padding: 5px;
+    outline: none;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+.deliverylist-input .date{
+    position: absolute;
+    left: 10%;
+    top: 20vh;
+}
+.deliverylist-input .time{
+    position: absolute;
+    left: 10%;
+    top: 38vh;
+}
+.deliverylist-input .customer{
+    position: absolute;
+    left: 10%;
+    top: 58vh;
+}
+.deliverylist-input .item{
+    position: absolute;
+    left: 55%;
+    top: 20vh;
+}
+.deliverylist-input .quantity{
+    position: absolute;
+    left: 55%;
+    top: 38vh;
+}
+.deliverylist-input .remark{
+    position: absolute;
+    left: 55%;
+    top: 58vh;
+}
+.deliverylist-input button{
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 7vh;
+    bottom: 5vh;
+    outline: none;
+    border: 1px solid #027600;
+    border-radius: 10px;
+    background: transparent;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.deliverylist-input button p{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-60%,-50%);
+    color:#027600;
+    transition: all 0.5s ease-in-out;
+    font-size: 1em;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+.deliverylist-input button svg{
+    fill: #027600;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-40%,-50%);
+    transition: all 0.5s ease-in-out;
+}
+.deliverylist-input button:hover{
+    background: #85FB83;
+    border: 2px solid #85FB83;
+}
+.deliverylist-input button:active{
+    width: 27%;
+    scale: 0.95;
+}
+.deliverylist-input button:hover p{
+    color: black;
+}
+.deliverylist-input button:hover svg{
+    fill: black;
+}
+.deliverylist-input .close{
+    fill: #000;
+    position: absolute;
+    top: 5vh;
+    right: 5%;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.deliverylist-input .close:hover{
+    scale: 1.2;
+}
